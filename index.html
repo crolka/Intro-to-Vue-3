@@ -13,7 +13,10 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart }})</div>
-      <product-display :premium="premium"></product-display>
+      <product-display :premium="premium" 
+                        :cart-empty="cartLength"
+                        @add-to-cart="updateCart"
+                        @remove-from-cart="removeItemCart"></product-display>
     </div>
 
     <!-- Import App -->
@@ -21,6 +24,7 @@
 
     <!-- Import Components -->
     <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ProductDetails.js"></script>
 
     <!-- Mount App -->
     <script>
