@@ -14,21 +14,21 @@ const app = Vue.createApp({
     },
     methods: {
         addToCart() {
-            this.cart += 1
+            this.cart += 1;
         },
         updateVariant(index) {
-            this.selectedVariant = index
+            this.selectedVariant = index;
         }
     },
     computed: {
         title() {
-            return this.brand + ' ' + this.product
+            return this.brand + ' ' + this.product;
         },
         image() {
-            return this.variants[this.selectedVariant].image
+            return this.variants[this.selectedVariant].image;
         },
         inStock() {
-            return this.variants[this.selectedVariant].image
+            return this.variants[this.selectedVariant].image;
         }
     }
-})
+});
